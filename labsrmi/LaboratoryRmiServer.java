@@ -8,6 +8,6 @@ public class LaboratoryRmiServer {
         LaboratoryService labservice = new LaboratoryServiceImpl();
         Registry registry = LocateRegistry.createRegistry(23000);
         registry.rebind("LabService", labservice);
-        System.out.println("Labervice RMI publicado en puerto 23000...");
+        System.out.println("LabService RMI publicado en puerto 23000...");
     }
 }

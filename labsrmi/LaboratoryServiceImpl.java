@@ -44,7 +44,7 @@ public class LaboratoryServiceImpl extends UnicastRemoteObject implements Labora
 
         Equipment equipment = equipments.get(codigo);
 
-        if (equipment == null || equipment.isReserverd()){
+        if (equipment == null || equipment.isReserved()){
             return false;
         }
 
@@ -56,7 +56,7 @@ public class LaboratoryServiceImpl extends UnicastRemoteObject implements Labora
 
         Equipment equipment = equipments.get(codigo);
 
-        if (equipment == null || equipment.isReserverd()){
+        if (equipment == null || !equipment.isReserved()){
             return false;
         }
 

@@ -10,5 +10,17 @@ public class LaboratoryRmiClient {
         LaboratoryService labservice = (LaboratoryService) registry.lookup("LabService");
         System.out.println("Equipos");
 
+        List<String> equipments = labservice.consultarEquipos();
+
+        for (String equipment : equipments) {
+            System.out.println(equipment);
+        }
+
+        System.out.println();
+        System.out.println(labservice.consultarEquipo("PC1"));
+        boolean reserved = labservice.reservarEquipo("PC1");
+        System.out.println("Reservation completed: " + reserved);
+        boolean released = labservice.liberarEquipo("PC1");
+        System.out.println("Release completed: " + released);
     }
 }

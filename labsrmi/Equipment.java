@@ -34,7 +34,7 @@ public class Equipment implements Serializable{
 
     @Override
     public String toString(){
-        return "Codigo: " + code + ", Nombre: " + name + ", Laboratorio: " + laboratory + ", Estado: " + (reserved ? "Reservado" : "Disponible"):
+        return "Codigo: " + code + ", Nombre: " + name + ", Laboratorio: " + laboratory + ", Estado: " + (reserved ? "Reservado" : "Disponible");
     }
 }
 
